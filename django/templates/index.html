@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Info</title>
+</head>
+
+<body>
+
+<h1>Welcome to the Index Page</h1>
+<h2>Student Information</h2>
+
+<table border="1">
+<tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>City</th>
+    <th>Grade</th>
+</tr>
+
+<tr>
+    <td>{{ students.name }}</td>
+    <td>{{ students.age }}</td>
+    <td>{{ students.city }}</td>
+    <td>
+        {% if students.marks >= 90 %}
+            A
+        {% elif students.marks >= 80 %}
+            B
+        {% elif students.marks >= 70 %}
+            C
+        {% elif students.marks >= 60 %}
+            D
+        {% else %}
+            F
+        {% endif %}
+    </td>
+</tr>
+
+</table>
+<home/> 
+</body>
+</html>
